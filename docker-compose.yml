@@ -1,0 +1,12 @@
+version: "3"
+services:
+  DisasterNotificationServer:
+    image: freemoon99/disaster-notification-server:latest
+    ports:
+      - "8081:8080"
+    depends_on:
+      - redis
+  redis:
+    image: redis
+    ports:
+      - 6379:6379
